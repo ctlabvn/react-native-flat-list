@@ -1,0 +1,77 @@
+{
+  "name": "react-native-flat-list",
+  "title": "React Native Flat List",
+  "version": "1.0.0",
+  "description": "TODO",
+  "main": "src/FlatList/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npm run lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github_account/react-native-flat-list.git",
+    "baseUrl": "https://github.com/github_account/react-native-flat-list"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "yourname@email.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native": ">=0.59.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.1.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "prettier-standard": "^14.0.3",
+    "react": "^16.8.3",
+    "react-native": "^0.59.10",
+    "standard": "^14.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "FlatList/**/*.{js,jsx,ts}": [
+      "prettier-standard",
+      "eslint --fix",
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ],
+    "globals": [
+      "__DEV__",
+      "fetch",
+      "navigator",
+      "global"
+    ],
+    "ignore": [
+      "__tests__",
+      "node_modules"
+    ]
+  }
+}
